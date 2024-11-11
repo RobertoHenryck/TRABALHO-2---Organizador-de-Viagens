@@ -32,5 +32,12 @@ class Model
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute([$nome,$data_hora,$local,$roteiro,$id]);
     }
+    public function deletarViagem($nome,$data_hora,$local,$roteiro, $id) {
+        $sql = "DELETE FROM quiz WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(':id', $nome,$data_hora,$local,$roteiro, $id);
+        return $stmt->execute();
+    }
+   
 }
 ?>
