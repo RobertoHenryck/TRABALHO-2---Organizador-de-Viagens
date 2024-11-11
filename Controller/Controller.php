@@ -1,0 +1,22 @@
+<?php
+require_once 'C:\aluno2\xampp\htdocs\atividaderefor\config.php';
+require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Model\Model.php';
+
+class Controller
+{
+    private $Model;
+
+public function __construct($pdo){
+    $this->Model = new Model($pdo);
+}
+
+public function cadastrarviagem($nome,$data,$hora,$local,$roteiro){
+return $this->Model->cadastrarviagem($nome,$data,$hora,$local,$roteiro);
+}
+
+public function listarViagens(){
+    return $this->Model->listarViagens();
+}
+
+}
+?>
