@@ -14,12 +14,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
 
 
-    $result = $Controller->deletarViagem($nome,$data_hora,$local,$roteiro, $id);
+    $result = $Controller->deletarViagem($id);
     if ($result) {
         $message = "Viagem deletada com sucesso!";
     } else {
         $message = "Falha ao deletar a Viagem.";
     }
+    header("Location: ../index.php");
 }
 ?>
 
