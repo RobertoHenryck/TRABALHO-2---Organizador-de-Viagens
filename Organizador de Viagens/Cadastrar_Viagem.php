@@ -1,7 +1,7 @@
 <?php
-  require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\config.php';
+  require_once 'C:\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\config.php';
   // require_once '../../Controller/atividade15Controller.php';
-  require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Controller\Controller.php';
+  require_once 'C:\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Controller\Controller.php';
 
 
   $Controller = new Controller($pdo);
@@ -79,7 +79,7 @@
 
     <br>
 
-    <a href="../../index.php">Voltar</a>
+    <a href="../index.php">Voltar</a>
   </center>
   
 </body>
