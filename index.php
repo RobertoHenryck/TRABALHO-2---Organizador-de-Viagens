@@ -1,15 +1,11 @@
 <?php
-
 require_once 'C:/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/config.php';
-require_once "C:/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/Controller\Controller.php";
-
+require_once "C:/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/Controller/Controller.php";
 
 $Controller = new Controller($pdo);
-
-
 $Viagens = $Controller->listarViagens();
-
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,19 +15,17 @@ $Viagens = $Controller->listarViagens();
     <title>Gerenciamento de Viagens</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Modak&family=Oswald:wght@200..700&display=swap');
-
-        body {
-
-            display: flex;
-            justify-content: center;
-            background-image: url('imagem index.png');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 900px;
-            flex-direction: column;
-        }
-
+body{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('planejamento de viagens fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    filter: blur(3.5px);
+}
         li {
             display: flex;
             justify-content: center;
@@ -41,26 +35,23 @@ $Viagens = $Controller->listarViagens();
             margin: auto;
             border-collapse: collapse;
             width: 900px;
-
         }
 
-        td {
+        td, th {
             padding: 10px;
             text-align: center;
             border: 1px solid #7f5539;
             background-color: #e6ccb2;
             color: #2f4550;
             font-size: 18px;
+            box-shadow: 5px 5px 5px #766153;
         }
 
         th {
-            background-color: lightgray;
-            border: 1px solid black;
+            background-color: #766153;
             font-size: 20px;
-
         }
 
-        /*utilizei chat gpt para fazer o H1 aparecer mais "suave"*/
         h1 {
             margin-bottom: 100px;
             display: flex;
@@ -70,25 +61,7 @@ $Viagens = $Controller->listarViagens();
             top: 10%;
             left: 50%;
             transform: translateX(-50%);
-            color: transparent;
-            background: linear-gradient(45deg, black, black);
-            -webkit-background-clip: text;
-            background-clip: text;
-            text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.5);
-            opacity: 0;
-            animation: fadeInText 3s ease-out forwards, pulse 1.5s infinite alternate;
-        }
-
-        @keyframes fadeInText {
-            0% {
-                opacity: 0;
-                transform: translateX(-50%) scale(0.8);
-            }
-
-            100% {
-                opacity: 1;
-                transform: translateX(-50%) scale(1);
-            }
+            color: #7f4f24;
         }
 
         a {
@@ -102,7 +75,6 @@ $Viagens = $Controller->listarViagens();
             margin: 0 auto;
             border-radius: 10px;
             transition: font-size 0.6s ease;
-
         }
 
         a:hover {
@@ -114,28 +86,26 @@ $Viagens = $Controller->listarViagens();
 
         .botoes {
             margin: 10px;
-
         }
     </style>
 </head>
 
 <body>
-
-
+    
     <h1>Lista das suas Viagens</h1>
 
     <div>
-
         <?php if (isset($Viagens) && is_array($Viagens) && count($Viagens) > 0): ?>
             <table>
-                <th>
-                <th>Nome</th>
-                <th>Data e Hora</th>
-                <th>Local</h>
-                <th>Roteiro da Viagem</h>
-
-
-                </th>
+                <thead>
+                    <tr>
+                        <th>Id da viagem</th>
+                        <th>Nome</th>
+                        <th>Data e Hora</th>
+                        <th>Local</th>
+                        <th>Roteiro da Viagem</th>
+                    </tr>
+                </thead>
                 <tbody>
                     <?php foreach ($Viagens as $Viagem): ?>
                         <tr>
@@ -146,22 +116,17 @@ $Viagens = $Controller->listarViagens();
                             <td><?php echo htmlspecialchars($Viagem['roteiro']); ?></td>
                         </tr>
                     <?php endforeach; ?>
-
-
                 </tbody>
             </table>
             <div class="botoes">
-                <a href="Organizador de Viagens\Cadastrar_Viagem.php">Cadastrar Sua Viagem</a>
+                <a href="Organizador de Viagens/Cadastrar_Viagem.php">Cadastrar Sua Viagem</a>
                 <br>
-                <a href="Organizador de Viagens\deletar.php">Excluir Viagem </a>
+                <a href="Organizador de Viagens/deletar.php">Excluir Viagem</a>
             </div>
         <?php else: ?>
             <p>Nenhuma viagem marcada</p>
-        <?php endif  ?>
+        <?php endif; ?>
     </div>
-
-
-
 </body>
 
 </html>
