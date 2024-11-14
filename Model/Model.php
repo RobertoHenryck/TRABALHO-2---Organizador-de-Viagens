@@ -38,6 +38,16 @@ class Model
         $stmt->bindParam(':id',$id);
         return $stmt->execute();
     }
+    public function cadastropessoa($nome,$email,$senha,$sexo)
+    {
+        $sql = "INSERT INTO cadastro(nome,email,senha,sexo) VALUES(:nome,:email,:senha,:sexo)";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->bindParam(":nome", $nome);
+        $stmt->bindParam(":email", $email);
+        $stmt->bindParam(":senha", $senha);
+        $stmt->bindParam(":sexo", $sexo);
+        return $stmt->execute();
+    }
    
 }
 ?>

@@ -129,6 +129,8 @@ $Viagens = $Controller->listarViagens();
                 <a href="Organizador de Viagens/Cadastrar_Viagem.php">Cadastrar Sua Viagem</a>
                 <br>
                 <a href="Organizador de Viagens/deletar.php">Excluir Viagem</a>
+                <br>
+                <a href="login.php">login</a>
             </div>
         <?php else: ?>
             <p>Nenhuma viagem marcada</p>

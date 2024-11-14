@@ -24,5 +24,8 @@ public function editarViagens($nome,$data_hora,$local,$roteiro,$id){
   public function deletarViagem($id) {
     return $this->Model->deletarViagem($id);
 }
+public function cadastropessoa($nome,$email,$senha,$sexo){
+    return $this->Model->cadastrarviagem($nome,$email,$senha,$sexo);
+    }
 }
 ?>

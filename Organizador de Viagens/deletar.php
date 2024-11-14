@@ -160,7 +160,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <br>
     <a href="../index.php">Voltar á sua lista</a>
     <br>
-    <a href="Organizador de Viagens/Cadastrar_Viagem.php">Cadastrar nova Viagem</a>
+    <a href="Cadastrar_Viagem.php">Cadastrar nova Viagem</a>
     <br>
     </div>
 </body>
