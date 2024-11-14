@@ -1,6 +1,6 @@
 <?php
-require_once 'C:/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/config.php';
-require_once "C:/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/Controller/Controller.php";
+require_once 'C:/aluno2/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/config.php';
+require_once "C:/aluno2/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/Controller/Controller.php";
 
 $Controller = new Controller($pdo);
 $Viagens = $Controller->listarViagens();
@@ -15,17 +15,20 @@ $Viagens = $Controller->listarViagens();
     <title>Gerenciamento de Viagens</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Modak&family=Oswald:wght@200..700&display=swap');
-body{
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('planejamento de viagens fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    filter: blur(3.5px);
-}
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('#');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            background-color: #f3d5b5;
+           
+        }
+
         li {
             display: flex;
             justify-content: center;
@@ -37,12 +40,13 @@ body{
             width: 900px;
         }
 
-        td, th {
+        td,
+        th {
             padding: 10px;
             text-align: center;
-            border: 1px solid #7f5539;
+            border: 1px solid #001524;
             background-color: #e6ccb2;
-            color: #2f4550;
+            color: #001524;
             font-size: 18px;
             box-shadow: 5px 5px 5px #766153;
         }
@@ -65,33 +69,36 @@ body{
         }
 
         a {
+            
             display: flex;
             justify-content: center;
             padding: 10px;
             text-decoration: none;
-            color: #1d3557;
-            background-color: black;
+            color: #001524;
+            background-color: #a98467;
             width: 200px;
             margin: 0 auto;
             border-radius: 10px;
             transition: font-size 0.6s ease;
+            box-shadow: 5px 5px 5px #766153;
+            font-size: large;
         }
 
         a:hover {
-            color: red;
+            color: #ddb892;
             text-decoration: none;
             transform: scale(1.2);
             font-size: 18px;
         }
 
         .botoes {
-            margin: 10px;
+            gap: 20px;
+            margin: 20px;
         }
     </style>
 </head>
-
 <body>
-    
+
     <h1>Lista das suas Viagens</h1>
 
     <div>
