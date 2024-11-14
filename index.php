@@ -26,6 +26,7 @@ $Viagens = $Controller->listarViagens();
             background-position: center;
             height: 100vh;
             background-color: #f3d5b5;
+            flex-direction: column;
            
         }
 
@@ -92,21 +93,32 @@ $Viagens = $Controller->listarViagens();
         }
 
         .botoes {
+            display: flex;
             gap: 20px;
             margin: 20px;
+            
+        }
+        .login{
+            display: flex;
+            align-items: center;
+            
         }
     </style>
 </head>
 <body>
+    <div class="login"> <?php
 
-    <h1>Lista das suas Viagens</h1>
-    
-    <div>
-    <?php
+
         if(isset($_COOKIE['Usuario'])){
             echo "Bem vindo(a)! $_COOKIE[Usuario]!";
         }
     ?>
+    </div>
+
+    <h1>Lista das suas Viagens</h1>
+    
+    <div>
+   
         <?php if (isset($Viagens) && is_array($Viagens) && count($Viagens) > 0): ?>
             <table>
                 <thead>
@@ -135,6 +147,7 @@ $Viagens = $Controller->listarViagens();
                 <br>
                 <a href="Organizador de Viagens/deletar.php">Excluir Viagem</a>
                 <br>
+                <a href="login.php">Página de Login</a>
             </div>
         <?php else: ?>
             <p>Nenhuma viagem marcada</p>
