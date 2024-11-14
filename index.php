@@ -130,7 +130,6 @@ $Viagens = $Controller->listarViagens();
                 <br>
                 <a href="Organizador de Viagens/deletar.php">Excluir Viagem</a>
                 <br>
-                <a href="login.php">login</a>
             </div>
         <?php else: ?>
             <p>Nenhuma viagem marcada</p>

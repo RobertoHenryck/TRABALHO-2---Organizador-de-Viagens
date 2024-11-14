@@ -25,7 +25,11 @@ public function editarViagens($nome,$data_hora,$local,$roteiro,$id){
     return $this->Model->deletarViagem($id);
 }
 public function cadastropessoa($nome,$email,$senha,$sexo){
-    return $this->Model->cadastrarviagem($nome,$email,$senha,$sexo);
+    return $this->Model->cadastropessoa($nome,$email,$senha,$sexo);
+    }
+    public function logIn($nome, $senha)
+    {
+         return $this->Model->logIn($nome,$senha);
     }
 }
 ?>
