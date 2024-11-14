@@ -57,14 +57,14 @@ $Viagens = $Controller->listarViagens();
         }
 
         h1 {
+            
             margin-bottom: 100px;
             display: flex;
             justify-content: center;
             font-size: 50px;
-            position: absolute;
+            margin: 0 auto;
             top: 10%;
             left: 50%;
-            transform: translateX(-50%);
             color: #7f4f24;
         }
 
@@ -100,8 +100,13 @@ $Viagens = $Controller->listarViagens();
 <body>
 
     <h1>Lista das suas Viagens</h1>
-
+    
     <div>
+    <?php
+        if(isset($_COOKIE['Usuario'])){
+            echo "Bem vindo(a)! $_COOKIE[Usuario]!";
+        }
+    ?>
         <?php if (isset($Viagens) && is_array($Viagens) && count($Viagens) > 0): ?>
             <table>
                 <thead>
