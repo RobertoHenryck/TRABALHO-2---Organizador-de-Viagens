@@ -1,7 +1,7 @@
 <?php
 require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\config.php';
 require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Model\Model.php';
-require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Organizador de Viagens\deletar.php';
+
 class Controller
 {
     private $Model;
@@ -24,5 +24,12 @@ public function editarViagens($nome,$data_hora,$local,$roteiro,$id){
   public function deletarViagem($id) {
     return $this->Model->deletarViagem($id);
 }
+public function cadastropessoa($nome,$email,$senha,$sexo){
+    return $this->Model->cadastropessoa($nome,$email,$senha,$sexo);
+    }
+    public function logIn($nome, $senha)
+    {
+         return $this->Model->logIn($nome,$senha);
+    }
 }
 ?>
