@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $restultado = $Controller->cadastrarviagem(nome: $nome, data_hora: $data_hora, local: $local, roteiro: $roteiro);
 
   if ($restultado) {
-    header('../../index.php');
+    header('index.php');
   } else {
 
     echo 'Erro ao cadastrar';

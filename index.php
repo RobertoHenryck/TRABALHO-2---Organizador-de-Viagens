@@ -27,7 +27,7 @@ $Viagens = $Controller->listarViagens();
             height: 100vh;
             background-color: #f3d5b5;
             flex-direction: column;
-           
+
         }
 
         li {
@@ -58,7 +58,7 @@ $Viagens = $Controller->listarViagens();
         }
 
         h1 {
-            
+
             margin-bottom: 100px;
             display: flex;
             justify-content: center;
@@ -70,7 +70,7 @@ $Viagens = $Controller->listarViagens();
         }
 
         a {
-            
+
             display: flex;
             justify-content: center;
             padding: 10px;
@@ -96,29 +96,31 @@ $Viagens = $Controller->listarViagens();
             display: flex;
             gap: 20px;
             margin: 20px;
-            
+
         }
-        .login{
+
+        .login {
             display: flex;
             align-items: center;
-            
+
         }
     </style>
 </head>
+
 <body>
     <div class="login"> <?php
 
 
-        if(isset($_COOKIE['Usuario'])){
-            echo "Bem vindo(a)! $_COOKIE[Usuario]!";
-        }
-    ?>
+                        if (isset($_COOKIE['Usuario'])) {
+                            echo "Bem vindo(a)! $_COOKIE[Usuario]!";
+                        }
+                        ?>
     </div>
 
     <h1>Lista das suas Viagens</h1>
-    
+
     <div>
-   
+
         <?php if (isset($Viagens) && is_array($Viagens) && count($Viagens) > 0): ?>
             <table>
                 <thead>
