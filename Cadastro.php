@@ -7,7 +7,7 @@ $Controller = new Controller($pdo);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $nome = $_POST['nome'];
   $email = $_POST['email'];
-  $senha = $_POST['senha']; // Hash da senha
+  $senha = $_POST['senha'];
   $sexo = $_POST['sexo'];
 
   $cadastro = $Controller->cadastropessoa(nome: $nome, email: $email, senha: $senha, sexo: $sexo);
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if ($cadastro) {
     header('index.php');
   } else {
-    echo 'Erro ao cadastrar. Por favor, verifique os dados inseridos.'; // Mensagem de erro mais informativa
+    echo 'Erro ao cadastrar. Por favor, verifique os dados inseridos.'; 
   }
 }
 ?>

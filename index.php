@@ -24,10 +24,10 @@ $Viagens = $Controller->listarViagens();
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
-            height: 100vh;
+            height:100vh;
             background-color: #f3d5b5;
             flex-direction: column;
-           
+
         }
 
         li {
@@ -58,19 +58,17 @@ $Viagens = $Controller->listarViagens();
         }
 
         h1 {
-            
-            margin-bottom: 100px;
             display: flex;
             justify-content: center;
             font-size: 50px;
-            margin: 0 auto;
             top: 10%;
             left: 50%;
             color: #7f4f24;
+
         }
 
         a {
-            
+
             display: flex;
             justify-content: center;
             padding: 10px;
@@ -96,29 +94,31 @@ $Viagens = $Controller->listarViagens();
             display: flex;
             gap: 20px;
             margin: 20px;
-            
+
         }
-        .login{
+
+        .login {
             display: flex;
             align-items: center;
-            
+
         }
     </style>
 </head>
+
 <body>
     <div class="login"> <?php
 
 
-        if(isset($_COOKIE['Usuario'])){
-            echo "Bem vindo(a)! $_COOKIE[Usuario]!";
-        }
-    ?>
+                        if (isset($_COOKIE['Usuario'])) {
+                            echo "Bem vindo(a)! $_COOKIE[Usuario]!";
+                        }
+                        ?>
     </div>
 
     <h1>Lista das suas Viagens</h1>
-    
+
     <div>
-   
+
         <?php if (isset($Viagens) && is_array($Viagens) && count($Viagens) > 0): ?>
             <table>
                 <thead>
@@ -148,6 +148,8 @@ $Viagens = $Controller->listarViagens();
                 <a href="Organizador de Viagens/deletar.php">Excluir Viagem</a>
                 <br>
                 <a href="pagina_de_perfil.php">Página de Perfil</a>
+                <br>
+                <a href="Organizador de Viagens/editar.php">Editar Viagem</a>
             </div>
         <?php else: ?>
             <p>Nenhuma viagem marcada</p>
