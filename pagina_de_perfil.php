@@ -1,7 +1,7 @@
 <?php
 
-require_once "C:/aluno2/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/config.php";
-require_once "C:/aluno2/xampp/htdocs/TRABALHO-2---Organizador-de-Viagens/Controller/Controller.php";
+require_once "C:\aluno2\xampp\htdocs\evolucao\stefany\TRABALHO-2---Organizador-de-Viagens\config.php";
+require_once "C:\aluno2\xampp\htdocs\evolucao\stefany\TRABALHO-2---Organizador-de-Viagens\Controller\Controller.php";
 
 $Controller = new Controller($pdo);
 

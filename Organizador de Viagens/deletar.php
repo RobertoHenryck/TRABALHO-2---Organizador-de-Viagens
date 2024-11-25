@@ -1,7 +1,7 @@
 <?php
-require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\config.php';
-require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Model\Model.php';
-require_once 'C:\aluno2\xampp\htdocs\TRABALHO-2---Organizador-de-Viagens\Controller\Controller.php';
+require_once __DIR__.'\config.php';
+require_once __DIR__.'\Model\Model.php';
+require_once __DIR__.'\Controller\Controller.php';
 
 $Model = new Model($pdo);
 $Controller = new Model($pdo);
