@@ -4,7 +4,7 @@
 
 
 $host = 'localhost';
-$dbname = 'organizador de viagens';
+$dbname = 'mvc / cadastro usuario';
 $username = 'root';
 $password = '';
 
